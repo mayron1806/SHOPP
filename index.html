@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">SHOPP</h1>
+        <div class="menu-section">
+            <div class="header-menu">
+                <ion-icon class="header-menu-open" name="menu"></ion-icon>
+                <ion-icon class="header-menu-close" name="close"></ion-icon>
+            </div>
+            <ul class="buttons">
+                <li class="button"><a href="#">Inicio</a></li>
+                <li class="button"><a href="#">Produtos</a></li>
+                <li class="button"><a href="#">Contato</a></li>
+                <li class="button"><a href="#">Sobre nós</a></li>
+            </ul>
+        </div>
+        
+    </header>
+    <div class="content">
+        <main>
+            <div class="main-content">
+                <div class="main-text">
+                    <h3 class="main-text-title">Titulo do produto</h3>
+                    <p class="main-text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Aliquam lacinia justo leo, non ornare est pulvinar quis. 
+                        Vivamus dignissim auctor justo, quis commodo massa luctus at. 
+                        Pellentesque vitae libero porttitor, sollicitudin risus in, lacinia nunc. 
+                        Duis eget sem felis.
+                    </p>
+                    <button class="main-text-button">Compre já</button>
+                </div>
+                <div class="main-image">
+                    <img src="./images/camera-removebg-preview.png" alt="">
+                </div>
+            </div>
+            
+        </main>
+        <section class="products">
+            <div class="product">
+                <img class="product-image" src="./images/camera.jpg" alt="">
+                <div class="product-info">
+                    <p class="product-info-name">Nome do produto<span>Marca</span></p>
+                    <p class="product-info-price">R$99,99</p>
+                </div>
+            </div>
+            <div class="product">
+                <img class="product-image" src="./images/tennis3.jpg" alt="">
+                <div class="product-info">
+                    <p class="product-info-name">Nome do produto<span>Marca</span></p>
+                    <p class="product-info-price">R$99,99</p>
+                </div>
+            </div>
+            <div class="product">
+                <img class="product-image" src="./images/headphone2.jpg" alt="">
+                <div class="product-info">
+                    <p class="product-info-name">Nome do produto<span>Marca</span></p>
+                    <p class="product-info-price">R$99,99</p>
+                </div>
+            </div>
+            <div class="product">
+                <img class="product-image" src="./images/controle.jpg" alt="">
+                <div class="product-info">
+                    <p class="product-info-name">Nome do produto<span>Marca</span></p>
+                    <p class="product-info-price">R$99,99</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer1">
+                <a href="#">Ex</a>
+            </div>
+                <ul class="footer-menu">
+                    <li><a href="#">CONTATO</a></li>/
+                    <li><a href="#">MEDIA</a></li>/
+                    <li><a href="#">LEGAL</a></li>/
+                    <li><a href="#">COOKIES</a></li>
+                </ul>
+                <ul class="footer-languages">
+                    <li class="language"><a href="#">FR</a></li>
+                    <li class="language"><a href="#">BR</a></li>
+                    <li class="language"><a href="#">ENG</a></li>
+                    <li class="language"><a href="#">PR</a></li>
+                </ul>
+        </footer>
+    </div>
+    <script>
+        // header menu
+        const header_menu_button = document.querySelector(".header-menu");
+        const menu_sections = document.querySelector(".menu-section");
+        header_menu_button.addEventListener("click", () =>{
+            menu_sections.classList.toggle("on");
+            if(menu_sections.classList.contains("on")){
+                document.querySelector("body").classList.add("disable-scroll");
+            }else{
+                document.querySelector("body").classList.remove("disable-scroll");
+            }
+        })  
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

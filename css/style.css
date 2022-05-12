@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+body.disable-scroll{
+    overflow: hidden;
+}
+/*
+//////////////////////////////////////////
+HEADER
+//////////////////////////////////////////
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:   #F9F6F0;
+    padding: 2rem;
+    min-width: 50rem;
+    margin: 0 auto;
+}
+.title{
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+}
+.header-menu{
+   display: none;
+}
+.buttons{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.buttons a{
+    color: black;
+    border: 0;
+    transform: 1s;
+    padding: 1rem;
+    outline: none;
+}
+.buttons a:hover{
+    border-bottom: 0.1rem solid black;
+}
+.content{
+    min-width: 70rem;
+    margin: 0 auto;
+}
+/*
+//////////////////////////////////////////
+MAIN
+//////////////////////////////////////////
+*/
+main{
+    background-color: #F9F6F0;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+.main-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* TEXT */
+.main-text{
+    width: 40%;
+    padding: 3rem;
+}
+.main-text-title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.main-text-description{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+.main-text-button{
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    border: 0.3rem solid black;
+    cursor: pointer;
+    background-color: #F9F6F0;
+    font-size: 2rem;
+    outline: none;
+    transition: 0.5s;
+}
+.main-text-button:hover{
+    background-color: #ebe6dc;
+    transform: translateY(-1rem);
+}
+/* IMAGE */
+.main-image{
+    width: 50%;
+    text-align: center;
+    max-height: 70rem;
+}
+.main-image img{
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+.products{
+    padding: 3rem;
+    margin-top: 5rem;
+    background-color: #FFFFFF;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem;
+    place-items: center;
+}
+.product{
+    background-color: #EEEEEE;
+    text-align: center;
+    padding: 3rem;
+    max-width: 40rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.product:hover{
+    transform: translateY(-2rem);
+    background-color: #dfd9d9;
+}
+.product-image{
+    width: 100%;
+    max-width: 30rem;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+.product-info-name{
+    text-align: left;
+    font-weight: 500;
+}
+.product-info-name span{
+    display: block;
+    color: rgba(43, 42, 42, 0.7);
+    font-weight: 400;
+}
+.product-info-price{
+    color: black;
+    font-weight: 900;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e2dfdf;
+    margin-top: 2rem;
+    align-items: center;
+    padding: 2rem;
+}
+.footer1, .footer-menu, .footer-languages{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+.footer1 a, .footer-menu li a, .footer-languages li a{
+    color: black;
+    padding: 0.5rem;
+}
+.footer1 a:hover, .footer-menu  li a:hover, .footer-languages li a:hover{
+    background-color: rgba(0, 0, 0, 0.09);
+}
+@media (max-width: 800px){
+    html{
+        font-size: 55%;
+    }
+    .content{
+        min-width: auto;
+    }
+}
+@media (max-width: 700px){
+    .buttons{
+        gap: 3rem;
+    }
+    .content{
+        min-width: auto;
+    }
+
+    .main-content{
+        flex-direction: column-reverse;
+    }
+    .main-image{
+        width: 80%;
+    }
+    .main-image img{
+        height: 50rem;
+        width: 90%;
+    }
+    .main-text {
+        width: 100%;
+        padding: 0 3rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media (max-width: 500px){
+    header{min-width: auto;}
+    .buttons{display: none;}
+    
+    .main-image img {
+        height: 42rem;
+    }
+
+    .footer-menu{
+        gap: 0.1rem;
+    }
+    .header-menu{
+        display: block;
+        height: 3.9rem;
+        width: 3.9rem;
+        margin: 2rem;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .header-menu ion-icon{
+        width: 100%;
+        height: 100%;
+    }
+    .header-menu ion-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+    }
+    .header-menu-open{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .header-menu-close{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .menu-section.on .header-menu-open{
+        display: initial;
+        opacity: 0;
+    }
+    .menu-section.on .header-menu-close{
+        display: initial;
+        opacity: 1;
+    }
+
+    .menu-section.on .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        overflow: hidden;
+    }
+}
